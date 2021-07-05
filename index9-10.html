@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >
+        /*
+        especificidade
+        IDs>Classes>Elements
+        */
+        .my-div{
+            color: red;
+        }
+        div{
+            color:green;
+        }
+        #my-div-id{
+            color: blue;
+        }
+        #my-input{
+            background-color: dodgerblue;
+        }
+        #my-input:hover{
+            background-color: green;
+        }
+        span[JMO]{
+            color: greenyellow;
+        }
+        .my-div::first-letter{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="my-div-id" class="my-div">
+        Olá, Mundo!
+    </div>
+    <input id="my-input">
+    <span JMO>Jefferson</span>
+</body>
+</html>
