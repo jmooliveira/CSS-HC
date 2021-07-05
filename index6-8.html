@@ -6,29 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /*
+        flex-grow - fator de crescimento
+        largura total: 500 px
+        espaco sobrando: 300 px
+
+        fator de crescimento do filho 1: 2/3 x 300px = 200px
+        fator de crescimento do filho 2: 1/3 x 300px = 100px
+        */
+
+        /*
+        flex-shrink - fator de encolhimento
+        largura total: 500 px
+        espaco faltando: -100 px
+
+        flex-basi: 300px nos dois filhos
+        flex-shrink: 2 no div 1
+        flex-shrink: 1 no div 2
+
+        fator de encolhimento do filho 1: (2x300)/(600+300)=.667x-100=66.7
+        fator de encolhimento do filho 2: (1x300)/(600+300)=.333x-100=33.3
+        */
+
         .flex-div{ /*div pai*/
             width: 500px;
-            height: 500px;
             display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
         }
 
         .child-div1{ 
             border: 1px solid black;
-            width: 20px;
-            height: 15px
+            flex-basis: 100px;
+            flex-grow: 2;
         }
         .child-div2{ 
             border: 1px solid black;
-            width: 20px;
-            height: 20px
+            flex-basis: 100px;
+            flex-grow: 1;
         }
-        .child-div3{ 
-            border: 1px solid black;
-            width: 20px;
-            height: 25px
-        }
+
     </style>
 </head>
 <body>
@@ -38,9 +53,6 @@
         </div>
         <div class='child-div2'>
             2
-        </div>
-        <div class='child-div3'>
-            3
         </div>
 
     </div>
